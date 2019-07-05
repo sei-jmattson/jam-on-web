@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3_html_bootstrap</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="mycustom.css"/> -->
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="jumbotron">
+                <h1>Html page with better style</h1>
+                <p>
+                    This is an example of an html document with external style.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <figure class="figure">
+                    <img src="../img/jamon.jpg" class="figure-img img-fluid rounded-circle">
+                    <figcaption class="figure-caption">jam-on in the lights.</figcaption>
+                </figure>
+            </div>
+
+            <p>
+                So people have already figured out nice styling that looks professional.
+                One such is <a href="https://getbootstrap.com">Bootstrap</a>. It has
+                a bunch of <abbr class="initialism" title="Cascading Style Sheets">CSS</abbr>
+                already done and you just reference it in the header.
+                When the browser loads the page, it fetches the external css file(s)
+                and combines them with any styles in the header. (That is why it is
+                called <i>Cascading</i>; each new addition overrides the stuff in
+                previous additions.)
+            </p>
+            <p>
+                Notice; now I'm using classes found in the Bootstrap css.
+            </p>
+            <p>
+                Also, check out the cascading that happens with you uncomment the <mark>mycustom.css link</mark>
+                in the header element.  We override two of the properties that bootstrap applies with the
+                <code>figure-caption</code> class.
+            </p>
+            <div>
+                <a class="btn btn-success" href="page2.html">Page 2 link</a>
+            </div>
+            <div>
+                <button class="btn btn-primary">Do nothing button</button>
+            </div>
+        </div>
+    </body>
+</html>

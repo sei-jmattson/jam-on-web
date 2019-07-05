@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2_html</title>
+        <style>
+            body {
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            h1 {
+                color: white;
+                background-color: purple;
+                padding: 16px 8px;
+                border-radius: 4px;
+            }
+            .btn {
+                text-decoration: none;
+                color: lightgray;
+                background-color: purple;
+                border-width: 1px;
+                border-radius: 4px;
+                border-color: #000;
+                padding: 8px;
+            }
+            div {
+                padding: 8px;
+            }
+            .main {
+                padding: 20px 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Html page with some style</h1>
+            <p>
+                This is an example of an html document with embedded style.
+            </p>
+            <div style="text-align:center;font-family:'Courier New', Courier, monospace">
+                <img width="400px" src="../img/jamon.jpg"/>
+                <p>Caption: jam-on in the lights</p>
+            </div>
+            <p>
+                Notice how I added a &lt;style&gt; element in the header section.
+                Now the page looks a bit better!  This is called CSS, Cascading Style Sheets.
+                You apply styling to html elements, either directly (like the h1 section)
+                or by using a <i>class</i> (like the .btn section).
+            </p>
+            <p>
+                I also applied some styling directly in the image div. It's better to
+                keep the styling separate, encapsulated in classes at least, so that
+                you don't have to change stuff all throughout your page to make it
+                look different. Simpler to have all the style info in one spot!
+            </p>
+            <p>
+                Also notice how I used &amp;lt; and &amp;gt; in the above paragraph.
+                Certain symbols that mean something in html have to be encoded if you
+                want them to be displayed. Otherwise the HTML parser would think it
+                is metadata.
+            </p>
+            <p>
+                There are plenty of sites that describe all the CSS properties so
+                check those out to find something specific.  The toughest thing
+                to work out is usually the page layout.  To get fancy you'll need
+                to understand grids and flex.
+            </p>
+            <div>
+                <a class="btn" href="page2.html">Page 2 link</a>
+            </div>
+            <div>
+                <button class="btn">Do nothing button</button>
+            </div>
+            <p class="btn">
+                I applied the same <i>btn</i> class to the above link and button and
+                <i>this paragraph</i>, so they look the same. (Even though it doesn't
+                really make sense to make a paragraph look like a button!)
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4_html_js</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="mycustom.css"/> -->
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="jumbotron">
+                <h1>Html page with javascript</h1>
+                <p>
+                    This is an example of an html document with javascript.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <figure class="figure">
+                    <img src="../img/jamon.jpg" class="figure-img img-fluid rounded-circle">
+                    <figcaption class="figure-caption">jam-on in the lights.</figcaption>
+                </figure>
+            </div>
+
+            <p>
+                Now that the page <strong><i>looks</i></strong> nice, you probably
+                want to make it actually <strong><i>do</i></strong> something!
+                That's where javascript comes in.  Browsers will also run any
+                javascript it finds on the page.
+            </p>
+
+            <p>
+                Hey! The "Do nothing button" does something now!  Also, if you open
+                your Browser Tools (F12 on Windows) (opt-cmd-I on Mac), you can see
+                any log statements in the Console.  Very helpful. There are more
+                sophisticated debugging techniques, but the <code>console.log()</code>
+                is sooo easy.  (Just don't leave them in your code, in most cases.)
+            </p>
+
+            <p>
+                [JQuery](https://jquery.com) is very popular bundle of javascript
+                functions that is a great tool for working with the Document Object
+                Model (DOM). You just add a script link to it, and you have lots of
+                power to make the page come alive.
+
+                <strong>TODO:</strong> show a good jquery example.
+            </p>
+            <div>
+                <a class="btn btn-success" href="page2.html">Page 2 link</a>
+            </div>
+            <div>
+                <button id="nothingButton" class="btn btn-primary" onclick="toggleText(this)">Do nothing button</button>
+            </div>
+            <div>
+                <button id="twosButton" class="btn btn-dark">2^n</button>
+                <span id="twosLabel">0: 1</span>
+            </div>
+        </div>
+
+        <script>
+            // alert('This js runs when the page loads. Browers have their own default ui for "alerts"');
+
+            // this runs after the page has been loaded.
+            document.addEventListener("DOMContentLoaded", function(ev) {
+                console.log('hi there!');
+                alert('This js runs after the page has been loaded.  Browsers have their own default ui for "alerts"');
+
+                // also, after the page loads, I wire up an event listener to a button click.
+                let twos = 0;
+                const twosBtn = document.getElementById('twosButton');
+                const twosLabel = document.getElementById('twosLabel');
+                twosBtn.addEventListener('click', function(el) {
+                    twos += 1;
+                    twosLabel.innerText = `${twos}: ${Math.pow(2,twos)}`; // this is called an interpolated string
+                });
+            });
+
+            // this one is wired up to the nothingButton directly in the html.
+            function toggleText(el) {
+                el.innerText = el.innerText.match(/nothing/)
+                    ? "Do something Button"
+                    : "Do nothing Button";
+                console.log(`changed button text: ${el.innerText}`);
+            }
+        </script>
+    </body>
+</html>

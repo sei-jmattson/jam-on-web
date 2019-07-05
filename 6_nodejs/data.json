@@ -1,0 +1,31 @@
+{
+    "zip": "",
+    "weather": [
+        {
+            "date": "yesterday",
+            "value": 80
+        },
+        {
+            "date": "today",
+            "value": 75
+        },
+        {
+            "date": "tomorrow",
+            "value": 92
+        }
+    ],
+    "news": [
+        {
+            "date": "yesterday",
+            "value": "Yawn. Old news."
+        },
+        {
+            "date": "today",
+            "value": "Well isn't that interesting."
+        },
+        {
+            "date": "tomorrow",
+            "value": "Wow! Predicting the future!"
+        }
+    ]
+}

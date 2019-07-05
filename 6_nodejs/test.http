@@ -1,0 +1,9 @@
+# This file is for the REST Client extension for VS Code
+###
+http://localhost:8080/api
+
+###
+http://localhost:8080
+
+###
+http://localhost:8080/jam
